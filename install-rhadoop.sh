@@ -6,7 +6,7 @@ yum groupinstall -y "Development Tools"
 yum install -y automake libtool flex bison pkgconfig gcc-c++ boost-devel libevent-devel zlib-devel python-devel ruby-devel openssl-devel curl-devel R
 
 # put environment vars in bash profile
-echo "setting enviringment vars"
+echo "setting environment vars"
 echo "export LD_LIBRARY_PATH=\$JAVA_HOME/jre/lib/amd64:\$JAVA_HOME/jre/lib/amd64/server" >> ~/.bash_profile
 echo "export HADOOP_CMD=/usr/bin/hadoop" >> ~/.bash_profile
 echo "export HADOOP_STREAMING=/usr/lib/hadoop-mapreduce/hadoop-streaming.jar" >> ~/.bash_profile
@@ -53,6 +53,11 @@ echo "installing RHadoop components"
 echo "removing archives"
 cd ~
 rm -rf ./thrift-0.8.0 ./thrift-0.8.0.tar.gz ./rmr2_3.3.1.tar.gz ./plyrmr_0.6.0.tar.gz ./ravro_1.0.4.tar.gz ./rhbase_1.2.1.tar.gz ./rhdfs_1.0.8.tar.gz
+
+# install RStudio Server
+echo "installing RStudio Server"
+cd ~
+./install-rstudio-server.sh
 
 # done
 echo "All done!"

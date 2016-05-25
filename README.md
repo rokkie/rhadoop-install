@@ -13,5 +13,12 @@ Tested with version 2.1 found at:
 6. Login into VM as root via SSH
 7. Copy files from shared folder to home directory
 8. Run: `./install-rhadoop.sh`
-9. Reboot VM
+9. Shutdown VM
+10. Forward port 8787
+    `vboxmanage modifyvm "Hortonworks Sandbox 2.1" --natpf1 tcp8787,tcp,127.0.0.1,8787,,8787`
+11. Start VM
+
+Please note that in step 10, the name of your VM may differ.
+To get a list of all the VM's run:
+`vboxmanage list vms`
 
