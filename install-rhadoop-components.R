@@ -1,8 +1,7 @@
-#!/usr/bin/R
+#!/usr/bin/env Rscript
 
-# download using wget
-print("use wget for downloading")
-options(download.file.method = "wget")
+# download over http
+options(repos="http://cran.rstudio.com/")
 
 # install rmr2
 print("installing dependencies for rmr2")
@@ -18,7 +17,7 @@ print("installing rmr2")
 install.packages("~/rmr2_3.3.1.tar.gz", repos = NULL, type = "source")
 
 # install plyrmr
-print("installing dependencies for plymer")
+print("installing dependencies for plymr")
 install.packages("dplyr")
 install.packages("R.methodsS3")
 install.packages("Hmisc")
@@ -45,5 +44,5 @@ print("installing hbase")
 install.packages("~/rhbase_1.2.1.tar.gz", repos = NULL, type = "source")
 
 # done
-print("the horrorshow is over, you can now do RHadoop")
+print("You can now do RHadoop")
 

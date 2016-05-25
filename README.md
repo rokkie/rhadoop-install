@@ -12,6 +12,6 @@ Tested with version 2.1 found at:
 5. Boot VM
 6. Login into VM as root via SSH
 7. Copy files from shared folder to home directory
-8. Run: `./install-rhadoop-deps.sh`
+8. Run: `./install-rhadoop.sh`
 9. Reboot VM
 
